@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AlbumId, UserId } from 'src/models/data.model';
 import { Constants as constants } from '../constants/constants';
 import { GlobalFunctions as globals } from '../constants/globals';
 
@@ -8,15 +9,15 @@ import { GlobalFunctions as globals } from '../constants/globals';
 })
 export class AlbumsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(public http: HttpClient) { }
 
-  getAlbumIds(filter: any) {
+  getAlbumIds(filter: UserId) {
     const params = globals.generateParams(filter);
     const url = `${constants.baseURL}${constants.albums}?${params}`
     return this.http.get(url);
   }
 
-  getPhotos(filter: any) {
+  getPhotos(filter: AlbumId) {
     const params = globals.generateParams(filter);
     const url = `${constants.baseURL}${constants.photos}?${params}`
     return this.http.get(url);

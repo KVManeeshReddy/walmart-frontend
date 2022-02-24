@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { UserData } from 'src/models/user-data.model';
+import { UserData } from 'src/models/data.model';
 import { UsersService } from 'src/services/users.service';
 
 @Component({

@@ -13,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class UsersListComponent implements OnInit {
   users: any = null
   constructor(
-    private router: Router,
+    public router: Router,
     private route: ActivatedRoute,
     private userService: UsersService,
     public dialog: MatDialog,

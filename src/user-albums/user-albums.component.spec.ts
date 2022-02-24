@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserAlbumsComponent } from './user-albums.component';
@@ -8,7 +9,8 @@ describe('UserAlbumsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserAlbumsComponent ]
+      declarations: [ UserAlbumsComponent ],
+      imports: [HttpClientTestingModule],
     })
     .compileComponents();
   });
