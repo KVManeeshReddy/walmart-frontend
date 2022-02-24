@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { NewPost } from 'src/models/data.model';
 import { PostsService } from 'src/services/posts.service';
 
 @Component({
@@ -31,11 +32,11 @@ export class UserPostsComponent implements OnInit {
   }
 
   postComment(title: string, body: string) {
-    const post = JSON.stringify({
+    const post: NewPost = {
       title: title,
       body: body,
       userId: this.userId,
-    });
+    };
     this.postsService.addPost(post).subscribe((data: any) =>{
       if(data && data.id) this.ngOnInit();
     });

@@ -15,7 +15,6 @@ export class UserDetailsComponent implements OnInit {
   userId: any;
   snapshot: any = null;
   constructor(
-    private location: Location,
     private userService: UsersService,
     private route: ActivatedRoute,
     ) {}
