@@ -5,10 +5,9 @@
 
 
 .user-details {
-  display: flex;
   .title {
-    display: flex;
     min-width: 35%;
+    display: flex;
     justify-self: flex-start;
     font-weight: bold;
   }
