@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+
+.user-details {
+  display: flex;
+  .title {
+    display: flex;
+    min-width: 35%;
+    justify-self: flex-start;
+    font-weight: bold;
+  }
+  .detail {
+    flex-grow: 1;
+  }
+}
